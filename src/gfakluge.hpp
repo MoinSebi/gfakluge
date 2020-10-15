@@ -20,6 +20,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <cassert>
+#include <bitset>
 
 
 #include "tinyfa.hpp"
@@ -251,6 +252,10 @@ namespace gfak{
         uint64_t id = 0;
         std::string sequence = "*";
         std::string name = "*";
+        uint64_t number_path = 0;
+        std::vector<bool> path_names;
+
+
         uint64_t length = UINT64_MAX;
         std::vector<opt_elem> opt_fields;
         inline std::string to_string_2() const{
